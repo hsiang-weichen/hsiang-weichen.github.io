@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+/*
+
+    E-Portfolio
+    Author: Hsiang-Wei Chen
+    Date:  2018-04-02
+
+    Filename:   style.css
+
+*/
+
+html {
+    background: url(black-and-white-blur-gray-34088.jpg) center center / cover repeat fixed, rgb(165, 146, 165);
+    font-family: Verdana, Geneva, sans-serif;
+	height: 100%;
+}
+
+body {
+   background-color: rgba(255, 255, 255, 0.9); 
+   margin: 0px auto;
+   min-width: 200px;
+   max-width: 1024px;   
+   width: 100%;
+   box-shadow: rgb(51, 51, 51) 10px 0px 40px,  rgb(51, 51, 51) -10px 0px 40px;
+   border-left: 1px solid rgb(153, 0, 153);
+   border-right: 1px solid rgb(153, 0, 153);
+}
+
+/* Flex Layout */
+
+body {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: column nowrap;
+   flex-flow: column nowrap;
+}
+
+header, footer {
+   width: 100%;
+}
+
+section {
+   -webkit-flex: 1 1 60%;
+   flex: 1 1 660px;
+}
+
+/* Header styles */
+
+body header > img {
+   display: block;
+   width: 100%;
+}
+
+header {
+	margin-bottom: 10px;
+}
+
+/* Navigation list styles */
+
+header nav ul {
+   background-color: black;
+}
+
+header nav ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+header nav ul li {
+   font-size: 0.9em; 
+   font-weight: bold;
+   padding: 0px 10px;
+   list-style-type: none;
+}
+
+header nav ul li a {
+   color: white;
+   display: block;
+   width: 100%;
+   text-decoration: none;
+}
+
+header nav ul li a:hover {
+   color: white;
+   background-color: rgb(169, 169, 169);
+}
+
+/* Navicon styles */
+
+image#navicon {
+	padding: 0px;
+	margin: 0px;
+}
+
+a#navicon {
+   display: none;
+}
+
+/* h1 styles */
+
+section h1 {
+   color: white;
+   background: linear-gradient(to right, rgb(47, 79, 79) 20%, black);
+   border-radius: 20px;
+   font-size: 1.1em;
+   letter-spacing: 5px;
+   padding: 5px 0px 5px 12px;
+   margin-top: 6px;
+   width: 95%;
+}
+
+/* h4 styles */
+
+section h4 {
+   color: black;
+   background: rgb(220, 220, 220);
+   border-radius: 10px;
+   width: 90%;
+   text-indent: 12px;
+   padding-left: 13px;
+}
+
+/* paragraph styles */
+
+section p {
+	padding-left: 26px;
+}
+
+/* list styles */
+
+section li {
+	margin: 5px;
+}
+
+/* anchor styles */
+
+section a.link {
+	border: 2px solid black;
+	background-color: black;
+	color: white;
+	border-radius: 1em/1em;
+	text-decoration: none;
+	padding: 5px;
+}
+
+section a.link:hover {
+   color: black;
+   background-color: yellow;
+}
+
+a {
+	text-decoration: none;
+}
+
+a.link1 {
+	margin-left: 26px;
+}
+
+/* Image styles */
+
+section img {
+	margin-left: 1em;
+}
+
+img#linkedinSmall{
+	position: relative;
+	top: 4px;
+}
+
+/* Footer styles */   
+
+footer {
+   color: white;    
+   background: rgba(47, 79, 79, 0.8);  
+   font-size: 0.75em;  
+   font-weight: bold;
+   font-style: normal;
+   height: 30px;
+   line-height: 30px;
+   text-align: center;
+   padding: 5px;
+   width: 99.1%;
+}
+
+
+/* ===============================
+   Mobile Styles: 0px to 480px 
+   ===============================
+*/
+@media only screen and (max-width: 480px) {
+
+   section {
+      width: 100%;
+   }
+   
+   a#navicon {
+      display: block;
+   }
+   
+   header nav ul {
+      display: none;
+   }
+   
+   header nav ul li {
+      font-size: 1em;
+      line-height: 1.3em;
+      height: 1.3em;
+   }
+   
+   a#navicon:hover+ul, header nav ul:hover {
+      display: block;
+   }
+   
+   img.link {
+		display: none;
+	}
+   
+   a.link1 {
+	   display: block;
+   }
+}
+
+/* ============================================
+   Tablet Styles: 481px and greater 
+   ============================================
+*/
+
+@media only screen and (min-width: 481px) {
+
+	img.link {
+		display: none;
+	}
+	
+	a.link1 {
+	   display: block;
+   }
+}
+
+/* =================================
+	Desktop Styles: 769px and greater
+   =================================
+*/
+
+@media only screen and (min-width: 769px) {
+   
+   header nav ul {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row nowrap;
+      flex-flow: row nowrap;
+      -webkit-justify-content: center;
+      justify-content: center;
+   }
+   
+   header nav ul li {
+      -webkit-flex: 1 1 auto;
+      flex: 0 1 auto;
+   }
+   
+   img.link {
+		display: block;
+	}
+   
+   a.link1 {
+	   display: none;
+   }
+   
+}
